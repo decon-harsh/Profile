@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raju</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <!-- NAVBAR -->
+        <style>
+    body{
+        margin: 0;
+        font-family: 'Roboto';
+        font-size: 16px;
+        height: 100vh;
+        width: 100%;
+        background-image:url("/home/harsh/Desktop/black-8.jpg");
+    }
+    
+    .topnav {
+     top:0;
+      position:fixed;
+      overflow: hidden;
+      background-color:transparent;
+      margin-left: 0%;
+      margin-right: 0% ;
+      width: 100%;
+      height: fit-content;
+      z-index: 500;
+    }
+    
+    .topnav a  {
+      /* float: left; */
+      margin-right: 60px;
+      font-weight: bold;
+      margin-top:5px;
+      margin-bottom:10px;
+      display: block;
+      color: gray;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    .topnav a:not(:first-child){
+        margin-right:10px;
+    }
+    .topnav a:first-child{
+        font-size: 20px;
+    }
+    
+    .topnav a:hover {
+      color:#ff4da6;
+    }
+    .topnav a:active {
+      color:orange;
+    }
+    
+    
+    .topnav .icon {
+      display: none;
+    }
+    .left{float: left;}
+    .right{
+        float: right;
+        margin-left:0px;
+        margin-right:0px ;
+        }
+    
+    
+    
+    @media screen and (max-width: 1000px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+        margin-right: 0px;  
+        float: right;
+        display: block;
+      }
+    }
+    
+    @media screen and (max-width: 1000px) {
+      .topnav.responsive {
+          position: fixed;
+          z-index: 500;
+      }
+      .topnav{height:72px;}
+      .responsive{height: fit-content;
+      position: fixed;}
+      .topnav.responsive .icon {
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .topnav a:hover{
+          color: gray;
+      }
+      .topnav a:first-child{
+          color: gray;
+          font-size:24px;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        margin: 0px;
+      }
+      .topnav.responsive a:not(:first-child){color: gray;}
+      #myTopnav{
+        background-color: white;
+      }
+      }
+
+        </style>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            window.onscroll=function(){scrollFunction()};
+            function scrollFunction(){
+                if (document.body.scrollTop>50||document.documentElement.scrollTop>50){
+                    document.getElementById("myTopnav").style.backgroundColor="white";
+                    document.getElementById("Welcomelogo").style.color="black";
+
+                }
+                else{
+                    document.getElementById("myTopnav").style.backgroundColor="transparent";
+                    document.getElementById("Welcomelogo").style.color="gray";
+                }
+                if (document.body.scrollTop>1345||document.documentElement.scrollTop>1345){
+                    document.getElementById("myTopnav").style.boxShadow="5px 10px 18px #888888";
+                }
+                else{
+                    document.getElementById("myTopnav").style.boxShadow="";
+                }   
+                
+            // document.getElementById("about-btn").onclick=myFunction();    
+            }
+        </script>
+        <div class="topnav" id="myTopnav">
+            <div class="container">
+                <a href="#" class="left" id="Welcomelogo"><strong>Welcome</strong></a>
+                <a href="#top-text" class="right" >About</a>
+                <a href="#skills" class="right">Skills</a>
+                <a href="#header-project" class="right">Projects</a>
+                <a href="#contact" class="right">Languages</a>
+                <a href="#contact" class="right">resume</a>
+                <a href="#contact" class="right">Contact</a>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- NAVBAR -->
+
+
+        <!-- header -->
+        <style>
+            #name{
+                font-family: "Poppins";
+                font-weight: bolder;
+                /* font-size: 70px; */
+                color: #FFFFFF;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            #nameone{
+                font-family: "Poppins";
+                font-weight: bolder;
+                /* font-size: 70px; */
+                color: #FFFFFF;
+                text-align: center;
+                margin-top: 250px;
+                margin-bottom: 30px;
+            }
+            
+            .short{
+                margin-top:0;
+                margin-left:47%;
+                margin-right:37%;
+                text-align: center;
+                width: 5%;
+                /* min-width:70px ; */
+                background-color:#e60073;
+                border: none;
+                height: 4px;
+            }
+
+            .qute{
+                /* width:100vw; */
+                text-align: center;
+                color: ivory;
+                font-size: 20px;
+                margin-top: 10px;
+                margin-bottom:10px ;
+            }
+            .btn{
+                margin-top:100px;
+                border-radius: 50px;
+                font-size: 15px;
+                font-family:Verdana;
+                height:60px;
+                width: 170px;
+                background-color: #e60073;
+                color: ivory;
+                font-weight: bold;
+            }
+
+            .glow {
+                font-size: 70px;
+                color: #fff;
+                text-align: center;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+
+
+
+            @media screen and (max-height:803px ){
+                .btn{margin-top: 50px;}
+                #nameone{margin-top: 200px;}
+                
+                }
+
+
+
+
+            @media screen and (max-width:460px ){
+                .glow{
+                    font-size: 12.5vw;
+                }
+                
+            }
+            @media screen and (max-width:390px ){
+                #nameone{margin-top: 140px;}
+                
+            }
+
+            @-webkit-keyframes glow {
+                from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                }
+            
+                to {
+                    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                }
+            }
+        </style>
+        <section class="header">
+            <h1 id="nameone" class="glow">&lt;2harsh&gt;</h1>
+            <h3 id="name">HARSH SINGH</h3>
+            <h1 id="name" class="glow">&lt;/2harsh&gt;</h1>
+            <button type="button" class="short"></button><br>
+            <div class="qute">Learning from Everything, following Nothing!!<br>
+            <button type="button" class="btn btn-lg">FIND OUT MORE</button>
+            </div>
+        </section>
+        <!-- header-->
+
+
+
+        <!-- Welcome -->
+        <style>
+            .container-fluid{
+                margin-top: 19.675vh;
+                /* --heigh:calc(45px); */
+                min-height: 45px;
+                background-color: #e60073;
+            }
+
+            @media screen and (max-height:803px ){
+                .container-fluid{margin-top: 25vh;}
+            }
+                
+            .welcome{
+                background-color: ivory;
+            }
+            #top-text{
+                position: relative;
+                text-align: center;
+                padding-top: 100px;
+                font-size: 40px;
+                color: ivory;
+            }
+            .details-box{
+                text-align: center;
+                font-size: 20px;
+                font-family:"comic sans" ;
+                color: ivory;
+                opacity: 0.7;
+                margin-left:30%;
+                margin-right: 30%;
+                padding-top: 5px;
+            }
+            @media screen and (max-width: 1000px) {
+                .details-box{
+                    margin-left: 20%;
+                    margin-right: 20%;
+                }
+            }
+
+            @media screen and(max-width: 806px) {
+                section .header1{
+                    height: 700px;
+                }
+            }
+            @media screen and(max-width: 460px) {
+                }
+            .two{
+                background-color: ivory;
+                color:black;
+                font-weight: bold;
+                margin-bottom:50px ;
+            }
+
+        </style>
+        <div class="container-fluid">
+            <section class="header1">
+            <h3 id="top-text">Welcome to my Website!</h3>
+            <button type="button" class="short welcome"></button><br>
+            <div class="details-box">I am a first-year undergraduate student in the department of Computer Science and Engineering, National Institute of Technology, Jamshedpur.<br>
+            <button type="button" class="btn two btn-lg">GET STARTED!</button> 
+            </div>
+            </section>
+        </div>
+
+
+        <!-- Skills , Projects -->
+        <style>
+            .container-skills{
+                margin-top: 0;
+                background-color: ivory;
+            }
+            #top-text2{
+                position: relative;
+                text-align: center;
+                padding-top: 100px;
+                font-size: 40px;
+                color:black;
+            }
+            #top-text3{
+                position: relative;
+                text-align: center;
+                padding-top: 180px;
+                font-size: 40px;
+                color:black;
+            }
+            .btn-skills
+            {
+                color: #e60073;
+                margin-bottom: 40px;
+            }
+            .row{
+                justify-content: space-around;
+            }
+            #algo{
+                margin-left:40.44%;
+                margin-right: 44.44%;
+                height:50px;
+                width:50px;
+                align-self:center;
+                margin-bottom: 10px;
+            }
+            #gradient{
+                margin-left:40.44%;
+                margin-right: 44.44%;
+                height:50px;
+                width:50px;
+                align-self:center;
+                margin-bottom: 10px;
+                z-index: +1;
+            }
+            #Layer_5{
+                margin-left:40.44%;
+                margin-right: 44.44%;
+                height:50px;
+                width:50px;
+                align-self:center;
+                margin-bottom: 10px; 
+            }
+            #Andro{
+                margin-left:40.44%;
+                margin-right: 44.44%;
+                height:50px;
+                width:50px;
+                align-self:center;
+                margin-bottom: 10px; 
+            }
+            .text-col-one{
+                text-align: center;
+            }
+            .col-two{
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            .mobile-active{
+                display:none;
+            }
+            @media screen and (max-width: 830px) {
+                .desktop-active{display: none;}
+                .mobile-active{display: inline;}
+                .col-one{
+                    margin-top: 40px;
+                    margin-bottom: 0px;
+                }
+            }
+
+        </style>
+        <div class="container-fluid container-skills">
+            <!-- Skills -->
+            <section id="skills" class="header">
+            <h3 id="top-text2">My Skills</h3>
+            <button type="button" class="short btn-skills"></button><br>
+            <div class="container-skills container-fluid">
+                <div class="row desktop-active">
+                    <div class="col col-one">
+                        <svg width="100" height="100" id="algo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M40.3095 53.3147L9.94337 91.2723C8.47884 93.1029 6.10446 93.1029 4.64009 91.2723L1.09821 86.8451C-0.363822 85.0176 -0.366634 82.0557 1.09196 80.2238L25.1579 50L1.09212 19.7764C-0.366478 17.9445 -0.363666 14.9826 1.09837 13.1551L4.64009 8.72793C6.10462 6.89727 8.47899 6.89727 9.94337 8.72793L40.3095 46.6855C41.774 48.516 41.774 51.484 40.3095 53.3147ZM99.9999 89.0625V82.8125C99.9999 80.2236 98.321 78.125 96.2499 78.125H48.7499C46.6788 78.125 44.9999 80.2236 44.9999 82.8125V89.0625C44.9999 91.6514 46.6788 93.75 48.7499 93.75H96.2499C98.321 93.75 99.9999 91.6514 99.9999 89.0625Z" fill="#E60073"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="100" height="100" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <h3 class="text-col-one">Algorithms</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Have practical knowledge of Sorting algos, Divide and Conquer, Hashing, Trees and Graphs.</div>
+                    </div>
+                    <div class="col col-one">
+                        <svg id="gradient" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <linearGradient id="linear-gradient" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="496" y2="16">
+                            <stop offset="0" stop-color="#27c1e6"/><stop offset=".5" stop-color="#c275e9"/><stop offset="1" stop-color="#f2515d"/>
+                        </linearGradient><path d="m496 376v-336a24.028 24.028 0 0 0 -24-24h-432a24.028 24.028 0 0 0 -24 24v336a24.028 24.028 0 0 0 24 24h158.556l-13.333 80h-33.223a8 8 0 0 0 0 16h208a8 8 0 0 0 0-16h-33.223l-13.333-80h68.613l69.589 69.589a24 24 0 0 0 33.941 0 24.028 24.028 0 0 0 0-33.941l-35.648-35.648h22.061a24.028 24.028 0 0 0 24-24zm-174.459-59.144 11.313-11.314 33.94 33.94-11.314 11.318zm-13.765-8.862-21.852-5.463a23.893 23.893 0 0 1 -17.565-17.886l-9.686-41.972 41.972 9.686a23.893 23.893 0 0 1 17.886 17.565l5.463 21.852zm32.3-17.855-6.024-24.1a39.825 39.825 0 0 0 -29.812-29.274l-54.44-12.56a8 8 0 0 0 -9.594 9.594l12.564 54.443a40 40 0 0 0 7.545 15.758h-228.315v-208h448v208h-126.061zm-300.076-258.139h432a8.009 8.009 0 0 1 8 8v40h-448v-40a8.009 8.009 0 0 1 8-8zm270.556 448h-109.112l13.333-80h82.446zm-270.556-96a8.009 8.009 0 0 1 -8-8v-56h257.828l16.306 4.076 59.923 59.924zm434.273 74.275a8 8 0 0 1 -11.314 0l-96.165-96.165 11.314-11.31 96.165 96.165a8.01 8.01 0 0 1 0 11.31zm-104.334-138.275h110.061v56a8.009 8.009 0 0 1 -8 8h-38.061zm-89.939 24a8 8 0 0 1 -8 8h-32a8 8 0 0 1 0-16h32a8 8 0 0 1 8 8zm-232-288a8 8 0 1 1 8 8 8 8 0 0 1 -8-8zm32 0a8 8 0 1 1 8 8 8 8 0 0 1 -8-8zm32 0a8 8 0 1 1 8 8 8 8 0 0 1 -8-8zm-16 64a8 8 0 0 1 8-8h16a8 8 0 0 1 0 16h-16a8 8 0 0 1 -8-8zm48 0a8 8 0 0 1 8-8h16a8 8 0 0 1 0 16h-16a8 8 0 0 1 -8-8zm-64 160a8 8 0 0 1 -8 8h-16a8 8 0 0 1 -8-8v-16a8 8 0 0 1 16 0v8h8a8 8 0 0 1 8 8zm48 0a8 8 0 0 1 -8 8h-16a8 8 0 0 1 0-16h16a8 8 0 0 1 8 8zm48 0a8 8 0 0 1 -8 8h-16a8 8 0 0 1 0-16h16a8 8 0 0 1 8 8zm48-160v16a8 8 0 0 1 -16 0v-8h-8a8 8 0 0 1 0-16h16a8 8 0 0 1 8 8zm0 48v16a8 8 0 0 1 -16 0v-16a8 8 0 0 1 16 0zm0 48v16a8 8 0 0 1 -16 0v-16a8 8 0 0 1 16 0zm0 48v16a8 8 0 0 1 -8 8h-16a8 8 0 0 1 0-16h8v-8a8 8 0 0 1 16 0zm-176-128v-16a8 8 0 0 1 8-8h16a8 8 0 0 1 0 16h-8v8a8 8 0 0 1 -16 0zm0 48v-16a8 8 0 0 1 16 0v16a8 8 0 0 1 -16 0zm0 48v-16a8 8 0 0 1 16 0v16a8 8 0 0 1 -16 0zm256-32a8 8 0 0 1 -8 8h-48a8 8 0 0 1 0-16h48a8 8 0 0 1 8 8zm160 0a8 8 0 0 1 -8 8h-128a8 8 0 0 1 0-16h128a8 8 0 0 1 8 8zm0 32a8 8 0 0 1 -8 8h-112a8 8 0 0 1 0-16h112a8 8 0 0 1 8 8zm-8-120h-208a8 8 0 0 0 -8 8v48a8 8 0 0 0 8 8h208a8 8 0 0 0 8-8v-48a8 8 0 0 0 -8-8zm-8 48h-192v-32h192zm-256-8a8 8 0 0 0 -8-8h-96a8 8 0 0 0 -8 8v96a8 8 0 0 0 8 8h96a8 8 0 0 0 8-8zm-16 88h-80v-80h80z" fill="url(#linear-gradient)"/>
+                        </svg>
+                        <h3 class="text-col-one">Web Design</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Have experience in Web Design by HTML, CSS, JS, Figma</div>
+                    </div>
+                    <div class="col col-one">
+                        <svg id="Layer_5" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="32" x2="32" y1="63" y2="1"><stop offset="0" stop-color="#9f2fff"/>
+                                <stop offset="1" stop-color="#0bb1d3"/></linearGradient>
+                                <path d="m26 47h2v2h-2zm-8 2h2v-2h-2zm4 0h2v-2h-2zm-21-1v-24c0-2.757 2.243-5 5-5h7v-15c0-1.654 1.346-3 3-3h44c1.654 0 3 1.346 3 3v40c0 1.654-1.346 3-3 3h-15v1c0 2.757-2.243 5-5 5h-9.612l1.333 4h3.279c1.654 0 3 1.346 3 3v3h-30v-3c0-1.654 1.346-3 3-3h3.279l1.333-4h-9.612c-2.757 0-5-2.243-5-5zm34 11h-24c-.551 0-1 .449-1 1v1h26v-1c0-.551-.449-1-1-1zm-6.721-6h-10.558l-1.333 4h13.225zm14.721-5v-3h-40v3c0 1.654 1.346 3 3 3h34c1.654 0 3-1.346 3-3zm2-7h12v-14h-12zm-30-37v5h46v-5c0-.551-.449-1-1-1h-44c-.551 0-1 .449-1 1zm0 15h25c2.757 0 5 2.243 5 5v1h14v18h-14v2h15c.551 0 1-.449 1-1v-33h-46zm-12 5v19h40v-19c0-1.654-1.346-3-3-3h-34c-1.654 0-3 1.346-3 3zm20-19h-2v2h2zm-4 0h-2v2h2zm8 0h-2v2h2zm-10 10h2v-2h-2zm42-2h-38v2h38zm-12 6h12v-2h-12zm0 4h12v-2h-12zm-42 15v-12c0-1.654 1.346-3 3-3h20c1.654 0 3 1.346 3 3v12c0 1.654-1.346 3-3 3h-20c-1.654 0-3-1.346-3-3zm2 0c0 .551.449 1 1 1h20c.551 0 1-.449 1-1v-12c0-.551-.449-1-1-1h-20c-.551 0-1 .449-1 1zm13.949-11.684-1.897-.633-4 12 1.897.633zm1.758 10.391 4.707-4.707-4.707-4.707-1.414 1.414 3.293 3.293-3.293 3.293zm-8-1.414-3.293-3.293 3.293-3.293-1.414-1.414-4.707 4.707 4.707 4.707zm26.293-12.293h-8v2h8zm0 4h-8v2h8zm0 4h-8v2h8zm0 4h-8v2h8zm-6 6h2v-2h-2zm4 0h2v-2h-2z" fill="url(#SVGID_1_)"/>
+                        </svg>
+                        <h3 class="text-col-one">Backend Development</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Proficient in Backend development by Python(Django, Bottle).</div>
+                    </div>
+                    <div class="col col-one">
+                        <svg id="Andro" width="449" height="513" viewBox="0 0 449 513" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32.004 192.007C14.34 192.007 0.00402832 206.343 0.00402832 224.007V352.007C0.00402832 369.671 14.34 384.007 32.004 384.007C49.668 384.007 64.004 369.671 64.004 352.007V224.007C64.004 206.343 49.668 192.007 32.004 192.007Z" fill="#E60073"/>
+                            <path d="M416.004 192.007C398.34 192.007 384.004 206.343 384.004 224.007V352.007C384.004 369.671 398.34 384.007 416.004 384.007C433.668 384.007 448.004 369.671 448.004 352.007V224.007C448.004 206.343 433.668 192.007 416.004 192.007Z" fill="#E60073"/>
+                            <path d="M96.004 385.863C96.004 403.527 110.34 417.863 128.004 417.863V480.007C128.004 497.671 142.34 512.007 160.004 512.007C177.668 512.007 192.004 497.671 192.004 480.007V417.863H256.004V480.007C256.004 497.671 270.34 512.007 288.004 512.007C305.668 512.007 320.004 497.671 320.004 480.007V417.863C337.668 417.863 352.004 403.527 352.004 385.863V193.863H96.004V385.863V385.863Z" fill="#E60073"/>
+                            <path d="M303.876 60.711L332.356 26.183C337.988 19.367 337.028 9.28698 330.212 3.65498C323.364 -1.94501 313.316 -1.01702 307.684 5.79898L276.548 43.527C260.484 36.263 242.788 32.007 224.004 32.007C204.964 32.007 187.044 36.423 170.82 43.911L140.516 6.02298C134.98 -0.857016 124.932 -2.00901 118.02 3.52698C111.14 9.06298 110.02 19.111 115.524 26.023L143.62 61.159C114.788 84.615 96.004 119.943 96.004 160.007H352.004C352.004 119.687 332.996 84.167 303.876 60.711ZM192.004 112.007C183.172 112.007 176.004 104.839 176.004 96.007C176.004 87.175 183.172 80.007 192.004 80.007C200.836 80.007 208.004 87.175 208.004 96.007C208.004 104.839 200.836 112.007 192.004 112.007ZM256.004 112.007C247.172 112.007 240.004 104.839 240.004 96.007C240.004 87.175 247.172 80.007 256.004 80.007C264.836 80.007 272.004 87.175 272.004 96.007C272.004 104.839 264.836 112.007 256.004 112.007Z" fill="#E60073"/>
+                        </svg>
+                        <h3 class="text-col-one">App Development</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, XML and JAVA.</div>
+                    </div>
+                </div>
+                <div class="row mobile-active">
+                    <div class="col col-one">
+                        <svg width="100" height="100" id="algo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M40.3095 53.3147L9.94337 91.2723C8.47884 93.1029 6.10446 93.1029 4.64009 91.2723L1.09821 86.8451C-0.363822 85.0176 -0.366634 82.0557 1.09196 80.2238L25.1579 50L1.09212 19.7764C-0.366478 17.9445 -0.363666 14.9826 1.09837 13.1551L4.64009 8.72793C6.10462 6.89727 8.47899 6.89727 9.94337 8.72793L40.3095 46.6855C41.774 48.516 41.774 51.484 40.3095 53.3147ZM99.9999 89.0625V82.8125C99.9999 80.2236 98.321 78.125 96.2499 78.125H48.7499C46.6788 78.125 44.9999 80.2236 44.9999 82.8125V89.0625C44.9999 91.6514 46.6788 93.75 48.7499 93.75H96.2499C98.321 93.75 99.9999 91.6514 99.9999 89.0625Z" fill="#E60073"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="100" height="100" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <h3 class="text-col-one">Algorithms</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Have practical knowledge of Sorting algos, Divide and Conquer, Hashing, Trees and Graphs.</div>
+                    </div>
+                    <div class="col col-one"> 
+                        <svg width="100" height="100" id="algo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M40.3095 53.3147L9.94337 91.2723C8.47884 93.1029 6.10446 93.1029 4.64009 91.2723L1.09821 86.8451C-0.363822 85.0176 -0.366634 82.0557 1.09196 80.2238L25.1579 50L1.09212 19.7764C-0.366478 17.9445 -0.363666 14.9826 1.09837 13.1551L4.64009 8.72793C6.10462 6.89727 8.47899 6.89727 9.94337 8.72793L40.3095 46.6855C41.774 48.516 41.774 51.484 40.3095 53.3147ZM99.9999 89.0625V82.8125C99.9999 80.2236 98.321 78.125 96.2499 78.125H48.7499C46.6788 78.125 44.9999 80.2236 44.9999 82.8125V89.0625C44.9999 91.6514 46.6788 93.75 48.7499 93.75H96.2499C98.321 93.75 99.9999 91.6514 99.9999 89.0625Z" fill="#E60073"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="100" height="100" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>                       
+                        <h3 class="text-col-one">Web Design</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Have experience in Web Design by HTML, CSS, JS, Figma</div>
+                    </div>
+                </div>
+                <div class="row mobile-active">   
+                    <div class="col col-two">
+                        <svg width="100" height="100" id="algo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M40.3095 53.3147L9.94337 91.2723C8.47884 93.1029 6.10446 93.1029 4.64009 91.2723L1.09821 86.8451C-0.363822 85.0176 -0.366634 82.0557 1.09196 80.2238L25.1579 50L1.09212 19.7764C-0.366478 17.9445 -0.363666 14.9826 1.09837 13.1551L4.64009 8.72793C6.10462 6.89727 8.47899 6.89727 9.94337 8.72793L40.3095 46.6855C41.774 48.516 41.774 51.484 40.3095 53.3147ZM99.9999 89.0625V82.8125C99.9999 80.2236 98.321 78.125 96.2499 78.125H48.7499C46.6788 78.125 44.9999 80.2236 44.9999 82.8125V89.0625C44.9999 91.6514 46.6788 93.75 48.7499 93.75H96.2499C98.321 93.75 99.9999 91.6514 99.9999 89.0625Z" fill="#E60073"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="100" height="100" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <h3 class="text-col-one">Backend Development</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Proficient in Backend development by Python(Django,Flask).</div>
+                    </div>
+                    <div class="col col-two">
+                        <svg id="Andro" width="449" height="513" viewBox="0 0 449 513" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32.004 192.007C14.34 192.007 0.00402832 206.343 0.00402832 224.007V352.007C0.00402832 369.671 14.34 384.007 32.004 384.007C49.668 384.007 64.004 369.671 64.004 352.007V224.007C64.004 206.343 49.668 192.007 32.004 192.007Z" fill="#E60073"/>
+                            <path d="M416.004 192.007C398.34 192.007 384.004 206.343 384.004 224.007V352.007C384.004 369.671 398.34 384.007 416.004 384.007C433.668 384.007 448.004 369.671 448.004 352.007V224.007C448.004 206.343 433.668 192.007 416.004 192.007Z" fill="#E60073"/>
+                            <path d="M96.004 385.863C96.004 403.527 110.34 417.863 128.004 417.863V480.007C128.004 497.671 142.34 512.007 160.004 512.007C177.668 512.007 192.004 497.671 192.004 480.007V417.863H256.004V480.007C256.004 497.671 270.34 512.007 288.004 512.007C305.668 512.007 320.004 497.671 320.004 480.007V417.863C337.668 417.863 352.004 403.527 352.004 385.863V193.863H96.004V385.863V385.863Z" fill="#E60073"/>
+                            <path d="M303.876 60.711L332.356 26.183C337.988 19.367 337.028 9.28698 330.212 3.65498C323.364 -1.94501 313.316 -1.01702 307.684 5.79898L276.548 43.527C260.484 36.263 242.788 32.007 224.004 32.007C204.964 32.007 187.044 36.423 170.82 43.911L140.516 6.02298C134.98 -0.857016 124.932 -2.00901 118.02 3.52698C111.14 9.06298 110.02 19.111 115.524 26.023L143.62 61.159C114.788 84.615 96.004 119.943 96.004 160.007H352.004C352.004 119.687 332.996 84.167 303.876 60.711ZM192.004 112.007C183.172 112.007 176.004 104.839 176.004 96.007C176.004 87.175 183.172 80.007 192.004 80.007C200.836 80.007 208.004 87.175 208.004 96.007C208.004 104.839 200.836 112.007 192.004 112.007ZM256.004 112.007C247.172 112.007 240.004 104.839 240.004 96.007C240.004 87.175 247.172 80.007 256.004 80.007C264.836 80.007 272.004 87.175 272.004 96.007C272.004 104.839 264.836 112.007 256.004 112.007Z" fill="#E60073"/>
+                        </svg>
+                        <h3 class="text-col-one">App Development</h3>
+                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, XML and JAVA.</div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <!-- Projects -->
+            <section class="header" id="header-project">
+                <h3 id="top-text3">My Projects</h3>
+                <button type="button" class="short btn-skills"></button><br>
+                <div class="container-skills container-fluid">
+                    <div class="row desktop-active">
+                        <div class="col col-one">
+                            <svg id="algo" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M98.1877 73.9953C92.8057 78.363 86.8802 81.9831 80.4541 84.5333L92.1375 104.769L103.729 109.719C105.836 110.619 108.217 109.244 108.492 106.969L110 94.4546L98.1877 73.9953V73.9953ZM107.317 53.68C108.361 52.0322 107.723 49.8151 106.017 48.8698L99.9859 45.5247C98.3789 44.6331 96.4173 45.211 95.4183 46.7536C86.5859 60.4024 71.3832 68.7489 55.0011 68.7489C49.8598 68.7489 44.8538 67.8359 40.0885 66.2718L54.5606 41.2042C54.711 41.2085 54.8485 41.2494 54.9989 41.2494C55.1493 41.2494 55.289 41.2085 55.4372 41.2042L66.4138 60.2176C73.1235 58.2927 79.2101 54.6855 84.1624 49.7076L73.0354 30.4343C74.636 27.506 75.6265 24.1975 75.6265 20.6247C75.6265 9.23384 66.3923 0 55.0011 0C43.6098 0 34.3757 9.23384 34.3757 20.6247C34.3757 24.1975 35.3661 27.506 36.9646 30.4343L22.2905 55.8521C19.5941 53.3578 17.1427 50.5691 15.0544 47.4733C14.0253 45.9479 12.053 45.4065 10.4609 46.3282L4.49892 49.7807C2.81236 50.7561 2.21508 52.9818 3.28717 54.6081C6.63236 59.687 10.7402 64.1062 15.3144 67.9325L0 94.4567L1.50823 106.971C1.78324 109.246 4.16375 110.621 6.27141 109.721L17.8625 104.771L33.0737 78.4254C39.9896 81.055 47.3998 82.4987 55.0011 82.4987C76.2818 82.4987 96.0113 71.5397 107.317 53.68ZM55.0011 13.7498C58.7974 13.7498 61.8762 16.8285 61.8762 20.6247C61.8762 24.4209 58.7974 27.4996 55.0011 27.4996C51.2047 27.4996 48.1259 24.4209 48.1259 20.6247C48.1259 16.8285 51.2047 13.7498 55.0011 13.7498Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">March For Anameia</h3>
+                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (php, codeigniter, bootstrap) in WhichCollege, a start-up by Kharagpur Alumni.</div>
+                        </div>
+                        <div class="col col-one">
+                            <svg id="algo" width="640" height="512" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M255.03 261.65C261.28 267.9 271.41 267.9 277.66 261.65L288.97 250.34C295.22 244.09 295.22 233.96 288.97 227.71L253.25 192L288.96 156.28C295.21 150.03 295.21 139.9 288.96 133.65L277.65 122.34C271.4 116.09 261.27 116.09 255.02 122.34L196.68 180.68C190.43 186.93 190.43 197.06 196.68 203.31L255.03 261.65V261.65ZM351.04 250.35L362.35 261.66C368.6 267.91 378.73 267.91 384.98 261.66L443.32 203.32C449.57 197.07 449.57 186.94 443.32 180.69L384.98 122.35C378.73 116.1 368.6 116.1 362.35 122.35L351.04 133.66C344.79 139.91 344.79 150.04 351.04 156.29L386.75 192L351.04 227.72C344.79 233.97 344.79 244.1 351.04 250.35V250.35ZM624 416H381.54C380.8 435.81 366.83 448 348.8 448H288C269.31 448 254.98 430.53 255.23 416H16C7.2 416 0 423.2 0 432V448C0 483.2 28.8 512 64 512H576C611.2 512 640 483.2 640 448V432C640 423.2 632.8 416 624 416ZM576 48C576 21.6 554.4 0 528 0H112C85.6 0 64 21.6 64 48V384H576V48ZM512 320H128V64H512V320Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">Web Development Intern</h3>
+                            <div class="text-col-one" style="font-size: 18px;">Have experience in Web Design by HTML, CSS, JS, Figma</div>
+                        </div>
+                        <div class="col col-one">
+                            <svg id="algo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 11.25C24 10.1423 23.4604 9.18563 22.6667 8.66625V1.50047C22.6667 1.09031 22.3758 0 21.3333 0C21.0367 0 20.7421 0.111563 20.5008 0.329062L16.9579 3.51797C15.1783 5.11828 12.9442 6 10.6667 6H2.66667C1.19375 6 0 7.34297 0 9V13.5C0 15.157 1.19375 16.5 2.66667 16.5H4.07083C4.01292 16.9912 3.98 17.4909 3.98 18C3.98 19.8642 4.36583 21.6258 5.045 23.2003C5.26125 23.7014 5.73333 24 6.22833 24H9.32333C10.4088 24 11.0604 22.6013 10.4025 21.63C9.71917 20.6213 9.31292 19.3631 9.31292 18C9.31292 17.4792 9.38042 16.9786 9.49667 16.5H10.6667C12.9442 16.5 15.1783 17.3817 16.9575 18.982L20.5004 22.1709C20.7367 22.3837 21.0303 22.4997 21.3329 22.5C22.3713 22.5 22.6663 21.4322 22.6663 21V13.8342C23.4604 13.3144 24 12.3577 24 11.25ZM20 17.8791L18.6229 16.6397C16.3729 14.6147 13.5467 13.5 10.6667 13.5V9C13.5467 9 16.3729 7.88531 18.6229 5.86031L20 4.62094V17.8791Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">Crowd Managementt</h3>
+                            <div class="text-col-one" style="font-size: 18px;">A software to optimise crowd in market places during COVID-19 pendamic under Prof. P.P.Chakraborty, NIT JSR.(Currently going on)</div>
+                        </div>
+                        <div class="col col-one">
+                            <svg id="algo" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M467.14 44.84C404.59 -17.64 305.47 -19.94 214.86 70.57C136.25 149.09 153.88 131.49 129.11 156.23C68.65 216.62 58.72 307.06 65.47 367.4L243.91 189.15C250.17 182.9 260.31 182.9 266.56 189.15C272.81 195.4 272.81 205.53 266.56 211.78L7.04 471.03C-2.34 480.4 -2.34 495.6 7.04 504.97C16.42 514.34 31.64 514.34 41.02 504.97L107.12 438.94C159.42 454.65 279 457.11 353.95 384H255.76L403.33 334.86C453.32 284.93 439.71 298.68 449.64 288H351.86L483.4 244.2C528.84 169.74 517.71 95.36 467.14 44.84V44.84Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">MySemester</h3>
+                            <div class="text-col-one" style="font-size: 18px;">A Genetic Algo based software to schedule our semester courses as well as timetable.(Currently going on)</div>
+                        </div>
+                    </div>
+
+                    <div class="row mobile-active">
+                        <div class="col col-one">
+                            <svg id="algo" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M98.1877 73.9953C92.8057 78.363 86.8802 81.9831 80.4541 84.5333L92.1375 104.769L103.729 109.719C105.836 110.619 108.217 109.244 108.492 106.969L110 94.4546L98.1877 73.9953V73.9953ZM107.317 53.68C108.361 52.0322 107.723 49.8151 106.017 48.8698L99.9859 45.5247C98.3789 44.6331 96.4173 45.211 95.4183 46.7536C86.5859 60.4024 71.3832 68.7489 55.0011 68.7489C49.8598 68.7489 44.8538 67.8359 40.0885 66.2718L54.5606 41.2042C54.711 41.2085 54.8485 41.2494 54.9989 41.2494C55.1493 41.2494 55.289 41.2085 55.4372 41.2042L66.4138 60.2176C73.1235 58.2927 79.2101 54.6855 84.1624 49.7076L73.0354 30.4343C74.636 27.506 75.6265 24.1975 75.6265 20.6247C75.6265 9.23384 66.3923 0 55.0011 0C43.6098 0 34.3757 9.23384 34.3757 20.6247C34.3757 24.1975 35.3661 27.506 36.9646 30.4343L22.2905 55.8521C19.5941 53.3578 17.1427 50.5691 15.0544 47.4733C14.0253 45.9479 12.053 45.4065 10.4609 46.3282L4.49892 49.7807C2.81236 50.7561 2.21508 52.9818 3.28717 54.6081C6.63236 59.687 10.7402 64.1062 15.3144 67.9325L0 94.4567L1.50823 106.971C1.78324 109.246 4.16375 110.621 6.27141 109.721L17.8625 104.771L33.0737 78.4254C39.9896 81.055 47.3998 82.4987 55.0011 82.4987C76.2818 82.4987 96.0113 71.5397 107.317 53.68ZM55.0011 13.7498C58.7974 13.7498 61.8762 16.8285 61.8762 20.6247C61.8762 24.4209 58.7974 27.4996 55.0011 27.4996C51.2047 27.4996 48.1259 24.4209 48.1259 20.6247C48.1259 16.8285 51.2047 13.7498 55.0011 13.7498Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">March For Anameia</h3>
+                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (php, codeigniter, bootstrap) in WhichCollege, a start-up by Kharagpur Alumni.</div>
+                        </div>
+                        <div class="col col-one">
+                            <svg id="algo" width="640" height="512" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M255.03 261.65C261.28 267.9 271.41 267.9 277.66 261.65L288.97 250.34C295.22 244.09 295.22 233.96 288.97 227.71L253.25 192L288.96 156.28C295.21 150.03 295.21 139.9 288.96 133.65L277.65 122.34C271.4 116.09 261.27 116.09 255.02 122.34L196.68 180.68C190.43 186.93 190.43 197.06 196.68 203.31L255.03 261.65V261.65ZM351.04 250.35L362.35 261.66C368.6 267.91 378.73 267.91 384.98 261.66L443.32 203.32C449.57 197.07 449.57 186.94 443.32 180.69L384.98 122.35C378.73 116.1 368.6 116.1 362.35 122.35L351.04 133.66C344.79 139.91 344.79 150.04 351.04 156.29L386.75 192L351.04 227.72C344.79 233.97 344.79 244.1 351.04 250.35V250.35ZM624 416H381.54C380.8 435.81 366.83 448 348.8 448H288C269.31 448 254.98 430.53 255.23 416H16C7.2 416 0 423.2 0 432V448C0 483.2 28.8 512 64 512H576C611.2 512 640 483.2 640 448V432C640 423.2 632.8 416 624 416ZM576 48C576 21.6 554.4 0 528 0H112C85.6 0 64 21.6 64 48V384H576V48ZM512 320H128V64H512V320Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">Web Development Intern</h3>
+                            <div class="text-col-one" style="font-size: 18px;">Have experience in Web Design by HTML, CSS, JS, ReactJS!</div>
+                        </div>
+                    </div>
+                    <div class="row mobile-active">
+                        <div class="col col-one">
+                            <svg id="algo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 11.25C24 10.1423 23.4604 9.18563 22.6667 8.66625V1.50047C22.6667 1.09031 22.3758 0 21.3333 0C21.0367 0 20.7421 0.111563 20.5008 0.329062L16.9579 3.51797C15.1783 5.11828 12.9442 6 10.6667 6H2.66667C1.19375 6 0 7.34297 0 9V13.5C0 15.157 1.19375 16.5 2.66667 16.5H4.07083C4.01292 16.9912 3.98 17.4909 3.98 18C3.98 19.8642 4.36583 21.6258 5.045 23.2003C5.26125 23.7014 5.73333 24 6.22833 24H9.32333C10.4088 24 11.0604 22.6013 10.4025 21.63C9.71917 20.6213 9.31292 19.3631 9.31292 18C9.31292 17.4792 9.38042 16.9786 9.49667 16.5H10.6667C12.9442 16.5 15.1783 17.3817 16.9575 18.982L20.5004 22.1709C20.7367 22.3837 21.0303 22.4997 21.3329 22.5C22.3713 22.5 22.6663 21.4322 22.6663 21V13.8342C23.4604 13.3144 24 12.3577 24 11.25ZM20 17.8791L18.6229 16.6397C16.3729 14.6147 13.5467 13.5 10.6667 13.5V9C13.5467 9 16.3729 7.88531 18.6229 5.86031L20 4.62094V17.8791Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">Crowd Managementt</h3>
+                            <div class="text-col-one" style="font-size: 18px;">A software to optimise crowd in market places during COVID-19 pendamic under Prof. P.P.Chakraborty, NIT JSR.(Currently going on)</div>
+                        </div>
+                        <div class="col col-one">
+                            <svg id="algo" width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M467.14 44.84C404.59 -17.64 305.47 -19.94 214.86 70.57C136.25 149.09 153.88 131.49 129.11 156.23C68.65 216.62 58.72 307.06 65.47 367.4L243.91 189.15C250.17 182.9 260.31 182.9 266.56 189.15C272.81 195.4 272.81 205.53 266.56 211.78L7.04 471.03C-2.34 480.4 -2.34 495.6 7.04 504.97C16.42 514.34 31.64 514.34 41.02 504.97L107.12 438.94C159.42 454.65 279 457.11 353.95 384H255.76L403.33 334.86C453.32 284.93 439.71 298.68 449.64 288H351.86L483.4 244.2C528.84 169.74 517.71 95.36 467.14 44.84V44.84Z" fill="#E60073"/>
+                            </svg>
+                            <h3 class="text-col-one">MySemester</h3>
+                            <div class="text-col-one" style="font-size: 18px;">A Genetic Algo based software to schedule our semester courses as well as timetable.(Currently going on)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Skills , Projects-->
+
+
+
+
+
+</body>
+</html>
