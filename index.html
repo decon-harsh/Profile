@@ -15,6 +15,9 @@
 <body>
         <!-- NAVBAR -->
         <style>
+    html{
+        scroll-behavior: smooth;
+   }
     body{
         margin: 0;
         font-family: 'Roboto';
@@ -152,13 +155,13 @@
         </script>
         <div class="topnav" id="myTopnav">
             <div class="container">
-                <a href="#" class="left" id="Welcomelogo"><strong>Welcome</strong></a>
-                <a href="#top-text" class="right" >About</a>
-                <a href="#skills" class="right">Skills</a>
-                <a href="#header-project" class="right">Projects</a>
-                <a href="#contact" class="right">Languages</a>
-                <a href="#contact" class="right">resume</a>
-                <a href="#contact" class="right">Contact</a>
+                <a href="#" class="left" id="Welcomelogo" onclick="myFunction()"><strong>Welcome</strong></a>
+                <a href="#top-text" class="right" onclick="myFunction()" >About</a>
+                <a href="#skills" class="right" onclick="myFunction()">Skills</a>
+                <a href="#header-project" class="right" onclick="myFunction()">Projects</a>
+                <a href="#skills" class="right" onclick="myFunction()">Languages</a>
+                <a href="#" class="right" onclick="myFunction()">resume</a>
+                <a href="#contact" class="right" onclick="myFunction()">Contact</a>
 
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -269,7 +272,7 @@
             <h1 id="name" class="glow">&lt;/2harsh&gt;</h1>
             <button type="button" class="short"></button><br>
             <div class="qute">Learning from Everything, following Nothing!!<br>
-            <button type="button" class="btn btn-lg">FIND OUT MORE</button>
+            <button onclick="location.href='#top-text';" type="button" class="btn btn-lg">FIND OUT MORE</button>
             </div>
         </section>
         <!-- header-->
@@ -336,7 +339,7 @@
             <h3 id="top-text">Welcome to my Website!</h3>
             <button type="button" class="short welcome"></button><br>
             <div class="details-box">I am a first-year undergraduate student in the department of Computer Science and Engineering, National Institute of Technology, Jamshedpur.<br>
-            <button type="button" class="btn two btn-lg">GET STARTED!</button> 
+            <button type="button" class="btn two btn-lg" onclick="location.href='#skills';">GET STARTED!</button> 
             </div>
             </section>
         </div>
@@ -460,7 +463,7 @@
                                 <path d="m26 47h2v2h-2zm-8 2h2v-2h-2zm4 0h2v-2h-2zm-21-1v-24c0-2.757 2.243-5 5-5h7v-15c0-1.654 1.346-3 3-3h44c1.654 0 3 1.346 3 3v40c0 1.654-1.346 3-3 3h-15v1c0 2.757-2.243 5-5 5h-9.612l1.333 4h3.279c1.654 0 3 1.346 3 3v3h-30v-3c0-1.654 1.346-3 3-3h3.279l1.333-4h-9.612c-2.757 0-5-2.243-5-5zm34 11h-24c-.551 0-1 .449-1 1v1h26v-1c0-.551-.449-1-1-1zm-6.721-6h-10.558l-1.333 4h13.225zm14.721-5v-3h-40v3c0 1.654 1.346 3 3 3h34c1.654 0 3-1.346 3-3zm2-7h12v-14h-12zm-30-37v5h46v-5c0-.551-.449-1-1-1h-44c-.551 0-1 .449-1 1zm0 15h25c2.757 0 5 2.243 5 5v1h14v18h-14v2h15c.551 0 1-.449 1-1v-33h-46zm-12 5v19h40v-19c0-1.654-1.346-3-3-3h-34c-1.654 0-3 1.346-3 3zm20-19h-2v2h2zm-4 0h-2v2h2zm8 0h-2v2h2zm-10 10h2v-2h-2zm42-2h-38v2h38zm-12 6h12v-2h-12zm0 4h12v-2h-12zm-42 15v-12c0-1.654 1.346-3 3-3h20c1.654 0 3 1.346 3 3v12c0 1.654-1.346 3-3 3h-20c-1.654 0-3-1.346-3-3zm2 0c0 .551.449 1 1 1h20c.551 0 1-.449 1-1v-12c0-.551-.449-1-1-1h-20c-.551 0-1 .449-1 1zm13.949-11.684-1.897-.633-4 12 1.897.633zm1.758 10.391 4.707-4.707-4.707-4.707-1.414 1.414 3.293 3.293-3.293 3.293zm-8-1.414-3.293-3.293 3.293-3.293-1.414-1.414-4.707 4.707 4.707 4.707zm26.293-12.293h-8v2h8zm0 4h-8v2h8zm0 4h-8v2h8zm0 4h-8v2h8zm-6 6h2v-2h-2zm4 0h2v-2h-2z" fill="url(#SVGID_1_)"/>
                         </svg>
                         <h3 class="text-col-one">Backend Development</h3>
-                        <div class="text-col-one" style="font-size: 18px;">Proficient in Backend development by Python(Django, Bottle).</div>
+                        <div class="text-col-one" style="font-size: 18px;">Proficient in Backend development by Python(Django, Flask).</div>
                     </div>
                     <div class="col col-one">
                         <svg id="Andro" width="449" height="513" viewBox="0 0 449 513" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -470,7 +473,7 @@
                             <path d="M303.876 60.711L332.356 26.183C337.988 19.367 337.028 9.28698 330.212 3.65498C323.364 -1.94501 313.316 -1.01702 307.684 5.79898L276.548 43.527C260.484 36.263 242.788 32.007 224.004 32.007C204.964 32.007 187.044 36.423 170.82 43.911L140.516 6.02298C134.98 -0.857016 124.932 -2.00901 118.02 3.52698C111.14 9.06298 110.02 19.111 115.524 26.023L143.62 61.159C114.788 84.615 96.004 119.943 96.004 160.007H352.004C352.004 119.687 332.996 84.167 303.876 60.711ZM192.004 112.007C183.172 112.007 176.004 104.839 176.004 96.007C176.004 87.175 183.172 80.007 192.004 80.007C200.836 80.007 208.004 87.175 208.004 96.007C208.004 104.839 200.836 112.007 192.004 112.007ZM256.004 112.007C247.172 112.007 240.004 104.839 240.004 96.007C240.004 87.175 247.172 80.007 256.004 80.007C264.836 80.007 272.004 87.175 272.004 96.007C272.004 104.839 264.836 112.007 256.004 112.007Z" fill="#E60073"/>
                         </svg>
                         <h3 class="text-col-one">App Development</h3>
-                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, XML and JAVA.</div>
+                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, KivyMd.</div>
                     </div>
                 </div>
                 <div class="row mobile-active">
@@ -526,7 +529,7 @@
                             <path d="M303.876 60.711L332.356 26.183C337.988 19.367 337.028 9.28698 330.212 3.65498C323.364 -1.94501 313.316 -1.01702 307.684 5.79898L276.548 43.527C260.484 36.263 242.788 32.007 224.004 32.007C204.964 32.007 187.044 36.423 170.82 43.911L140.516 6.02298C134.98 -0.857016 124.932 -2.00901 118.02 3.52698C111.14 9.06298 110.02 19.111 115.524 26.023L143.62 61.159C114.788 84.615 96.004 119.943 96.004 160.007H352.004C352.004 119.687 332.996 84.167 303.876 60.711ZM192.004 112.007C183.172 112.007 176.004 104.839 176.004 96.007C176.004 87.175 183.172 80.007 192.004 80.007C200.836 80.007 208.004 87.175 208.004 96.007C208.004 104.839 200.836 112.007 192.004 112.007ZM256.004 112.007C247.172 112.007 240.004 104.839 240.004 96.007C240.004 87.175 247.172 80.007 256.004 80.007C264.836 80.007 272.004 87.175 272.004 96.007C272.004 104.839 264.836 112.007 256.004 112.007Z" fill="#E60073"/>
                         </svg>
                         <h3 class="text-col-one">App Development</h3>
-                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, XML and JAVA.</div>
+                        <div class="text-col-one" style="font-size: 18px;">Made several android apps by Android Studio, KivyMd.</div>
                     </div>
                 </div>
             </div>
@@ -542,7 +545,7 @@
                                 <path d="M98.1877 73.9953C92.8057 78.363 86.8802 81.9831 80.4541 84.5333L92.1375 104.769L103.729 109.719C105.836 110.619 108.217 109.244 108.492 106.969L110 94.4546L98.1877 73.9953V73.9953ZM107.317 53.68C108.361 52.0322 107.723 49.8151 106.017 48.8698L99.9859 45.5247C98.3789 44.6331 96.4173 45.211 95.4183 46.7536C86.5859 60.4024 71.3832 68.7489 55.0011 68.7489C49.8598 68.7489 44.8538 67.8359 40.0885 66.2718L54.5606 41.2042C54.711 41.2085 54.8485 41.2494 54.9989 41.2494C55.1493 41.2494 55.289 41.2085 55.4372 41.2042L66.4138 60.2176C73.1235 58.2927 79.2101 54.6855 84.1624 49.7076L73.0354 30.4343C74.636 27.506 75.6265 24.1975 75.6265 20.6247C75.6265 9.23384 66.3923 0 55.0011 0C43.6098 0 34.3757 9.23384 34.3757 20.6247C34.3757 24.1975 35.3661 27.506 36.9646 30.4343L22.2905 55.8521C19.5941 53.3578 17.1427 50.5691 15.0544 47.4733C14.0253 45.9479 12.053 45.4065 10.4609 46.3282L4.49892 49.7807C2.81236 50.7561 2.21508 52.9818 3.28717 54.6081C6.63236 59.687 10.7402 64.1062 15.3144 67.9325L0 94.4567L1.50823 106.971C1.78324 109.246 4.16375 110.621 6.27141 109.721L17.8625 104.771L33.0737 78.4254C39.9896 81.055 47.3998 82.4987 55.0011 82.4987C76.2818 82.4987 96.0113 71.5397 107.317 53.68ZM55.0011 13.7498C58.7974 13.7498 61.8762 16.8285 61.8762 20.6247C61.8762 24.4209 58.7974 27.4996 55.0011 27.4996C51.2047 27.4996 48.1259 24.4209 48.1259 20.6247C48.1259 16.8285 51.2047 13.7498 55.0011 13.7498Z" fill="#E60073"/>
                             </svg>
                             <h3 class="text-col-one">March For Anameia</h3>
-                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (php, codeigniter, bootstrap) in WhichCollege, a start-up by Kharagpur Alumni.</div>
+                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (Flutter, Django-RestFramework, Firebase) in March For Anameia, a start-up by Kharagpur Alumni.</div>
                         </div>
                         <div class="col col-one">
                             <svg id="algo" width="640" height="512" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -573,7 +576,7 @@
                                 <path d="M98.1877 73.9953C92.8057 78.363 86.8802 81.9831 80.4541 84.5333L92.1375 104.769L103.729 109.719C105.836 110.619 108.217 109.244 108.492 106.969L110 94.4546L98.1877 73.9953V73.9953ZM107.317 53.68C108.361 52.0322 107.723 49.8151 106.017 48.8698L99.9859 45.5247C98.3789 44.6331 96.4173 45.211 95.4183 46.7536C86.5859 60.4024 71.3832 68.7489 55.0011 68.7489C49.8598 68.7489 44.8538 67.8359 40.0885 66.2718L54.5606 41.2042C54.711 41.2085 54.8485 41.2494 54.9989 41.2494C55.1493 41.2494 55.289 41.2085 55.4372 41.2042L66.4138 60.2176C73.1235 58.2927 79.2101 54.6855 84.1624 49.7076L73.0354 30.4343C74.636 27.506 75.6265 24.1975 75.6265 20.6247C75.6265 9.23384 66.3923 0 55.0011 0C43.6098 0 34.3757 9.23384 34.3757 20.6247C34.3757 24.1975 35.3661 27.506 36.9646 30.4343L22.2905 55.8521C19.5941 53.3578 17.1427 50.5691 15.0544 47.4733C14.0253 45.9479 12.053 45.4065 10.4609 46.3282L4.49892 49.7807C2.81236 50.7561 2.21508 52.9818 3.28717 54.6081C6.63236 59.687 10.7402 64.1062 15.3144 67.9325L0 94.4567L1.50823 106.971C1.78324 109.246 4.16375 110.621 6.27141 109.721L17.8625 104.771L33.0737 78.4254C39.9896 81.055 47.3998 82.4987 55.0011 82.4987C76.2818 82.4987 96.0113 71.5397 107.317 53.68ZM55.0011 13.7498C58.7974 13.7498 61.8762 16.8285 61.8762 20.6247C61.8762 24.4209 58.7974 27.4996 55.0011 27.4996C51.2047 27.4996 48.1259 24.4209 48.1259 20.6247C48.1259 16.8285 51.2047 13.7498 55.0011 13.7498Z" fill="#E60073"/>
                             </svg>
                             <h3 class="text-col-one">March For Anameia</h3>
-                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (php, codeigniter, bootstrap) in WhichCollege, a start-up by Kharagpur Alumni.</div>
+                            <div class="text-col-one" style="font-size: 18px;">Winter Intern on Web Development (Flutter, Django-RestFramework, Firebase) in March For Anameia, a start-up by Kharagpur Alumni.</div>
                         </div>
                         <div class="col col-one">
                             <svg id="algo" width="640" height="512" viewBox="0 0 640 512" fill="none" xmlns="http://www.w3.org/2000/svg">
